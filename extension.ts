@@ -28,7 +28,6 @@ export function activate() {
 	commands.registerCommand('extension.version', () => execute('version'));
 	commands.registerCommand('extension.test', () => execute('test'));
 	commands.registerCommand('extension.testServer', () => execute('testServer'));
-    commands.registerCommand('extension.setupIntelliSense', () => execute('setupIntelliSense'));
 }
 
 function execute(cmd? : string, arg? : Array<any>) {
