@@ -7,13 +7,7 @@ var emberManager : embercli.EmberCliManager;
 var installed : boolean = false;
 
 export function activate() {
-	workspace.findFiles('.ember-cli', '', 1).then((result) => {
-		if (!fileOps.hasJSConfig()) {
-			execute('setupProject');
-		} else {
-			execute();
-		}
-	});
+    execute('setupProject');
 	
 	// Register Commands
 	commands.registerCommand('extension.addon', () => execute('addon'));

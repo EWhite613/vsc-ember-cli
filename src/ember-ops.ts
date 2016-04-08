@@ -5,6 +5,7 @@ import * as cp from "child_process";
 import * as os from "os";
 
 import { capitalizeFirstLetter } from "./helpers";
+const semverRegex = require("semver-regex");
 
 export interface EmberOperationResult {
     code: Number;
@@ -166,6 +167,18 @@ export function getHelp(cmd: string): any {
             reject(e);
         }
     });
+}
+
+export function getEmberVersion() {
+    let exec = cp.execSync(`ember -v`, {
+        cwd: workspace.rootPath
+    });
+
+    let execOutput = exec.toString();
+    let versionPosition = execOutput.indexOf('version: ');
+    let version = execOutput.slice(versionPosition + 9, versionPosition + 16);
+    
+    return semverRegex().exec(version)[0];
 }
 
 function parseHelp(cmd: string, output: any): any {

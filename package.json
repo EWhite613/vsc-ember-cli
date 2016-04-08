@@ -116,6 +116,8 @@
   },
   "dependencies": {
     "merge": "^1.2.0",
-    "path-exists": "^2.1.0"
+    "path-exists": "^2.1.0",
+    "semver": "^5.1.0",
+    "semver-regex": "^1.0.0"
   }
 }
