@@ -255,6 +255,10 @@ export class EmberCliManager {
             window.showInformationMessage("Ember Cli: Test Server is running");
         }
     }
+    
+    public setupIntelliSense() {
+        console.log("Setup IntelliSense here")
+    }
 
     /*
     // Helper Functions

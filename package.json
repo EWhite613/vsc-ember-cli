@@ -35,6 +35,7 @@
     "onCommand:extension.version",
     "onCommand:extension.test",
     "onCommand:extension.testServer",
+    "onCommand:extension.setupIntelliSense",
     "workspaceContains:.ember-cli"
   ],
   "bugs": {
@@ -101,6 +102,10 @@
       {
         "command": "extension.testServer",
         "title": "Ember: Test Server (Start, Stop, Restart)"
+      },
+      {
+        "command": "extension.setupIntelliSense",
+        "title": "Ember: Setup IntelliSense"
       }
     ]
   },
